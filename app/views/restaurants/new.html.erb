@@ -1,0 +1,12 @@
+<div class="container" style="width: 70%;">
+  <div class="text-center m-4">
+    <h2>New Restaurant</h2>
+  </div>
+  <%= simple_form_for [@restaurant] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category, collection: %w(chinese italian japanese french belgian)%>
+    <%= f.submit "Create", class: "btn btn-outline-primary mt-3" %>
+  <% end %>
+</div>

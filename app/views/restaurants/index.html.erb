@@ -1,0 +1,18 @@
+
+<div class="container d-flex justify-content-center mt-5">
+    <div class="card" style="width: 70%;">
+      <% @restaurants.each do |restaurant| %>
+      <div class="card-body pb-0">
+        <h5 class="card-title"><%= restaurant.name %></h5>
+        <h6 class="card-subtitle mb-3 text-muted"><%= "- #{restaurant.category}" %></h6>
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="card-text mb-0">
+          <%= "Address: #{restaurant.address} - Phone: #{restaurant.phone_number}"%></p>
+          <%= link_to "About", restaurant_path(restaurant), class: "btn btn-sm btn-outline-secondary" %>
+        </div>
+
+      </div>
+      <hr>
+      <% end %>
+    </div>
+</div>
